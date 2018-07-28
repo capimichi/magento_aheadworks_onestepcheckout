@@ -1,0 +1,1142 @@
+#aw-onestepcheckout-container{
+    padding:20px;
+    margin:0 auto;
+    background: #fbfaf6;
+    border: 1px solid #bbafa0;
+    width: 858px;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+#aw-onestepcheckout-container label{
+    font-weight: normal;
+    font-size: 12px;
+}
+.aw-onestepcheckout-error-msg, .aw-onestepcheckout-success-msg{
+    font-weight:bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.aw-onestepcheckout-error-msg{
+    color: #df280a;
+    border: 1px solid #f16048;
+    background-color: #faebe7;
+}
+.aw-onestepcheckout-success-msg{
+    color: #3d6611;
+    border: 1px solid #446423;
+    background-color: #eff5ea;
+}
+.aw-onestepcheckout-error-msg li, .aw-onestepcheckout-success-msg li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#aw-onestepcheckout-container div.validation-passed,
+#aw-onestepcheckout-container div.validation-error{
+    background: none;
+    padding-right: 0;
+}
+.aw-onestepcheckout-overlay, .aw-onestepcheckout-timer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 995;/*for compatibility with menu*/
+    background-color: #fbfaf6;
+}
+#acp-overlay{
+    z-index: 995;
+}
+.aw-onestepcheckout-overlay-48{
+    background-image: url('../images/ajax-loader-48px.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.aw-onestepcheckout-overlay-24{
+    background-image: url('../images/ajax-loader-24px.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.aw-onestepcheckout-overlay-16{
+    background-image: url('../images/ajax-loader-16px.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.aw-onestepcheckout-timer{
+    display: none;
+    overflow: hidden;
+}
+.aw-onestepcheckout-timer-title{
+    text-align:center;
+    padding-top:20px;
+}
+.aw-onestepcheckout-timer-title h1 span{
+    font-weight: bold;
+}
+.aw-onestepcheckout-timer-description{
+    text-align:center;
+}
+.aw-onestepcheckout-timer-actions a{
+    font-weight: bold;
+    font-size: 17px;
+}
+.aw-onestepcheckout-timer-actions-left, .aw-onestepcheckout-timer-actions-right{
+    width:50%;
+    float:left
+}
+.aw-onestepcheckout-timer-actions-left{
+    text-align: right;
+}
+.aw-onestepcheckout-timer-actions-right{
+    text-align: left;
+}
+.aw-onestepcheckout-timer-actions-left a{
+    margin-right: 15px;
+}
+.aw-onestepcheckout-timer-actions-right a{
+    margin-left: 15px;
+}
+#aw-onestepcheckout-general-container{
+    border-top: 1px solid #D8D2C7;
+}
+
+/* NUMBERS */
+.aw-onestepcheckout-number{
+    color: #404040;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    margin-bottom: 0px;
+    padding-top: 8px;
+}
+.aw-onestepcheckout-number-0,
+.aw-onestepcheckout-number-1,
+.aw-onestepcheckout-number-2,
+.aw-onestepcheckout-number-3,
+.aw-onestepcheckout-number-4,
+.aw-onestepcheckout-number-5,
+.aw-onestepcheckout-number-6,
+.aw-onestepcheckout-number-7,
+.aw-onestepcheckout-number-8,
+.aw-onestepcheckout-number-9,
+.aw-onestepcheckout-number-v{
+    padding-left: 38px;
+    background-repeat: no-repeat;
+    background-position: 0px 4px;
+}
+.aw-onestepcheckout-number-0{
+    background-image: url(../images/number/0.png);
+}
+.aw-onestepcheckout-number-1{
+    background-image: url(../images/number/1.png);
+}
+.aw-onestepcheckout-number-2{
+    background-image: url(../images/number/2.png);
+}
+.aw-onestepcheckout-number-3{
+    background-image: url(../images/number/3.png);
+}
+.aw-onestepcheckout-number-4{
+    background-image: url(../images/number/4.png);
+}
+.aw-onestepcheckout-number-5{
+    background-image: url(../images/number/5.png);
+}
+.aw-onestepcheckout-number-6{
+    background-image: url(../images/number/6.png);
+}
+.aw-onestepcheckout-number-7{
+    background-image: url(../images/number/7.png);
+}
+.aw-onestepcheckout-number-8{
+    background-image: url(../images/number/8.png);
+}
+.aw-onestepcheckout-number-9{
+    background-image: url(../images/number/9.png);
+}
+.aw-onestepcheckout-number-v{
+    background-image: url(../images/number/v.png);
+}
+
+.aw-onestepcheckout-add-loader-into-this-block,
+#aw-onestepcheckout-order-review-cart-wrapper,
+#aw-onestepcheckout-order-review-coupon-wrapper,
+#aw-onestepcheckout-order-review-enterprise-giftcard-wrapper,
+#aw-onestepcheckout-order-review-aw-giftcard-wrapper,
+#aw-onestepcheckout-order-review-enterprise-storecredit-wrapper,
+#aw-onestepcheckout-order-review-enterprise-points-wrapper,
+#aw-onestepcheckout-order-review-points-wrapper,
+#aw-onestepcheckout-order-review-referafriend-wrapper,
+#aw-onestepcheckout-order-review-storecredit-wrapper {
+    position: relative;
+    width: 265px;
+}
+
+#aw-onestepcheckout-related-wrapper {
+    position: relative;
+}
+
+/*TITLE*/
+#aw-onestepcheckout-title{
+
+}
+#aw-onestepcheckout-title-description{
+    font-size: 18px;
+}
+
+/* LOGIN FORM*/
+#aw-onestepcheckout-authentification{
+    border-top: 1px solid #D8D2C7;
+}
+#aw-onestepcheckout-authentification-container{
+    position: relative;
+    top: 0px;
+}
+#aw-onestepcheckout-authentification .validation-advice{
+    width: 163px;
+}
+#aw-onestepcheckout-login-form, #aw-onestepcheckout-forgot-password-form, #aw-onestepcheckout-forgot-password-success{
+    display: block;
+    padding-top:5px;
+}
+#aw-onestepcheckout-login-form .form-list, #aw-onestepcheckout-forgot-password-form .form-list, #aw-onestepcheckout-forgot-password-success{
+    padding-bottom: 5px
+}
+.aw-onestepcheckout-auth-form-block{
+    display:inline-block;
+    padding-right: 10px;
+    vertical-align: top;
+}
+.aw-onestepcheckout-auth-form-block .input-box{
+    width:180px;
+}
+.aw-onestepcheckout-auth-form-block input.input-text {
+    width:174px;
+}
+#aw-onestepcheckout-login-forgot-link{
+    cursor: pointer;
+}
+#aw-onestepcheckout-login-form-block-fbi{
+    position: absolute;
+    right: 0;
+    padding-top: 17px;
+}
+#aw-onestepcheckout-forgot-password-form p, #aw-onestepcheckout-forgot-password-success p{
+    margin:0;
+    padding:0;
+}
+#aw-onestepcheckout-authentification label{
+    width: auto;
+    text-align: left;
+    padding: 0;
+}
+#aw-onestepcheckout-authentification label.required em {
+    float: right;
+    font-style: normal;
+    color: #eb340a;
+    position: relative;
+    right: -4px;
+    margin-right: 0;
+}
+#aw-onestepcheckout-authentification .form-list .input-box{
+    float: none;
+}
+#aw-onestepcheckout-authentification .form-list .input-box input{
+    float: none;
+}
+
+#aw-onestepcheckout-login-form .button-section{
+    padding-top: 20px;
+}
+
+/* GENERAL CONTAINER */
+.aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-left,
+.aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-middle,
+.aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-right{
+    display: inline-block;
+    -moz-box-flex: 1;
+    width:33%;
+    vertical-align: top;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-left{
+    background: transparent url(../images/column-separator.png) no-repeat scroll right top;
+}
+.aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-right{
+    background: transparent url(../images/column-separator.png) no-repeat scroll left top;
+}
+
+.aw-onestepcheckout-general-form-field{
+    margin-top:5px;
+}
+.aw-onestepcheckout-general-form-field label{
+    width: auto;
+    padding: 0;
+}
+.aw-onestepcheckout-general-form-field select[name=billing\[gender\]],
+.aw-onestepcheckout-general-form-field select[name=billing\[country_id\]],
+.aw-onestepcheckout-general-form-field select[name=shipping\[country_id\]]{
+    width: 260px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-wide{
+    width:260px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-wide .input-box input{
+    width:254px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left,
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right{
+    width:120px;
+    float: left;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left{
+    margin-right: 16px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left .input-box,
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box{
+    width:120px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left .input-box input,
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box input{
+    width:114px;
+}
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box select{
+    width:120px;
+}
+.customer-name .validation-advice,
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left .validation-advice,
+.aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .validation-advice{
+    width:120px;
+}
+
+/* BILLING/SHIPPING FORM */
+#aw-onestepcheckout-address-billing #billing-address-select,
+#aw-onestepcheckout-address-shipping #shipping-address-select{
+    width: 260px;
+}
+#aw-onestepcheckout-address label[for=billing-address-select],
+#aw-onestepcheckout-address label[for=shipping-address-select]{
+    width: 260px;
+}
+#aw-onestepcheckout-address .customer-name .field{
+    width: 120px;
+    margin-top: 5px;
+}
+#aw-onestepcheckout-address .customer-name .field:nth-child(odd){
+    margin-right: 20px;
+}
+#aw-onestepcheckout-address .customer-name .field .input-box{
+    width:120px;
+}
+#aw-onestepcheckout-address .customer-name .field .input-box input{
+    width:114px;
+}
+#aw-onestepcheckout-address .customer-name .field .input-box select{
+    width:120px;
+}
+#aw-onestepcheckout-address .form-list .control label{
+    float: none;
+}
+#aw-onestepcheckout-container .form-list .field {
+    float: left;
+}
+#aw-onestepcheckout-container .form-list .aw-onestepcheckout-general-form-field label,
+#aw-onestepcheckout-container .form-list .field label{
+    width: auto;
+    text-align: left;
+}
+#aw-onestepcheckout-container .form-list label.required em {
+    float: right;
+    font-style: normal;
+    color: #eb340a;
+    position: relative;
+    right: -4px;
+    margin-right: 0;
+}
+#aw-onestepcheckout-address .input-box.customer-dob {
+    display: block;
+    clear: both;
+    width: 260px;
+}
+#aw-onestepcheckout-address .form-list .input-box.customer-dob .dob-month,
+#aw-onestepcheckout-address .form-list .input-box.customer-dob .dob-day{
+    width: 60px;
+    margin-right: 0 !important;
+}
+#aw-onestepcheckout-address .form-list .input-box.customer-dob .dob-year {
+    width: 140px;
+    margin-right: 0 !important;
+}
+#aw-onestepcheckout-address .form-list .customer-dob .dob-month input.input-text,
+#aw-onestepcheckout-address .form-list .customer-dob .dob-day input.input-text{
+    width: 46px !important;
+}
+#aw-onestepcheckout-address .form-list .customer-dob .dob-year input.input-text{
+    width: 134px !important;
+}
+
+/* SHIPPING/PAYMENT METHOD */
+#aw-onestepcheckout-shipping-method .sp-methods,
+#aw-onestepcheckout-payment-method .sp-methods{
+    margin-top: 5px;
+    border: thin dashed transparent;
+}
+#aw-onestepcheckout-shipping-method .sp-methods .input-box,
+#aw-onestepcheckout-payment-method .sp-methods .input-box{
+    width: 233px;
+}
+#aw-onestepcheckout-shipping-method .sp-methods dt,
+#aw-onestepcheckout-payment-method .sp-methods dt{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+#aw-onestepcheckout-shipping-method .sp-methods dd li,
+#aw-onestepcheckout-payment-method .sp-methods dt{
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+#aw-onestepcheckout-payment-method .sp-methods dt,
+#aw-onestepcheckout-payment-method .sp-methods dd,
+#aw-onestepcheckout-shipping-method .sp-methods dd {
+    margin-left: 8px;
+    margin-bottom: 0;
+}
+#aw-onestepcheckout-payment-method .sp-methods dt>span+label{
+    margin-left: -8px;
+}
+#aw-onestepcheckout-payment-method .sp-methods ul {
+    padding-left: 18px;
+}
+#aw-onestepcheckout-payment-method .form-list select {
+    width: 230px;
+}
+#aw-onestepcheckout-payment-method .form-list select.month {
+    width: 149px;
+}
+#aw-onestepcheckout-payment-method .form-list select.year,
+#aw-onestepcheckout-payment-method .form-list select.year+.validation-advice{
+    width: 71px;
+}
+#aw-onestepcheckout-payment-method .form-list input.input-text {
+    width: 224px;
+}
+#aw-onestepcheckout-container .sp-methods label{
+    width: auto;
+    text-align: left;
+}
+#aw-onestepcheckout-container .sp-methods label.required em {
+    float: right;
+    font-style: normal;
+    color: #eb340a;
+    position: relative;
+    right: -4px;
+    margin-right: 0;
+}
+#aw-onestepcheckout-shipping-method .gift-messages h3,
+#aw-onestepcheckout-shipping-method .gift-messages-form h4{
+    color: #2f2f2f;
+}
+#aw-onestepcheckout-shipping-method .gift-messages-form .input-box,
+#aw-onestepcheckout-shipping-method .gift-messages-form .field{
+    width: 260px;
+}
+#aw-onestepcheckout-shipping-method .gift-messages-form textarea{
+    width: 254px;
+}
+#aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container .input-box,
+#aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container .field,
+#aw-onestepcheckout-shipping-method .gift-messages-form .item .input-box,
+#aw-onestepcheckout-shipping-method .gift-messages-form .item .field{
+    width: 170px;
+}
+#aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container textarea,
+#aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container .input-text
+#aw-onestepcheckout-shipping-method .gift-messages-form .item textarea,
+#aw-onestepcheckout-shipping-method .gift-messages-form .item .input-text{
+    width: 166px;
+}
+/* Gift options for EE theme */
+#aw-onestepcheckout-shipping-method .gift-message-form .inner-box{
+    height: auto;
+    overflow: visible;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form h4{
+    color: #2f2f2f;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form #allow-gift-options-for-order-container{
+    padding: 0 10px;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form .input-box,
+#aw-onestepcheckout-shipping-method .gift-message-form .field{
+    width: 242px;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form textarea,
+#aw-onestepcheckout-shipping-method .gift-message-form .input-text{
+    width: 240px;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form #allow-gift-messages-for-items-container .input-box,
+#aw-onestepcheckout-shipping-method .gift-message-form #allow-gift-messages-for-items-container .field{
+    width: 170px;
+}
+#aw-onestepcheckout-shipping-method .gift-message-form #allow-gift-messages-for-items-container textarea,
+#aw-onestepcheckout-shipping-method .gift-message-form #allow-gift-messages-for-items-container .input-text{
+    width: 166px;
+}
+#aw-onestepcheckout-shipping-method .gift-options-for-order .fieldset label,
+#aw-onestepcheckout-shipping-method .gift-message-form .gift-item .fieldset label{
+    width: 50px;
+}
+
+/* REVIEW CART */
+.aw-onestepcheckout-cart-table {
+    width: 100%;
+    font-size: 12px;
+}
+.aw-onestepcheckout-cart-table thead th {
+    border-top: thin solid #BEBCB7;
+    border-bottom: thin solid #BEBCB7;
+    font-weight: bold;
+    padding: 2px 8px;
+    color: #0a263c;
+    vertical-align: middle;
+}
+.aw-onestepcheckout-cart-table thead th.qty{
+    text-align: center;
+}
+.aw-onestepcheckout-cart-table thead th.total{
+    text-align: right;
+}
+.aw-onestepcheckout-cart-table tbody td,
+.aw-onestepcheckout-cart-table tfoot td,
+.aw-onestepcheckout-cart-table tfoot th{
+    border-bottom: thin solid #BEBCB7;
+    padding: 3px 8px;
+}
+.aw-onestepcheckout-cart-table tbody .btn-remove{
+    display: none;
+}
+.aw-onestepcheckout-cart-table .btn-remove2{
+    display: block;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/btn_trash.gif) 0 0 no-repeat;
+    text-indent: -999em;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+}
+.aw-onestepcheckout-cart-table .item-options{
+    font-size: 11px;
+}
+.aw-onestepcheckout-cart-table .item-options dt{
+    padding: 3px 0 0 10px;
+}
+.aw-onestepcheckout-cart-table .item-options dd{
+    padding: 0 0 3px 10px;
+}
+#aw-onestepcheckout-review-table-cart-wrapper{
+    position: relative;
+}
+
+#aw-onestepcheckout-review-cart-redirect-timer-block {
+    border: 1px solid #D8D2C7;
+}
+#aw-onestepcheckout-review-cart-redirect-timer-block.aw-onestepcheckout-overlay{
+    background-position-x: 50%;
+    background-position-y: 90%;
+}
+#aw-onestepcheckout-review-cart-redirect-timer-block .aw-onestepcheckout-timer-title{
+    padding: 20px 20px 0px;
+}
+#aw-onestepcheckout-review-cart-redirect-timer-block h1{
+    font-size: 14px;
+}
+#aw-onestepcheckout-review-cart-redirect-timer-block .aw-onestepcheckout-timer-actions a{
+    font-size: 12px;
+}
+
+/* REVIEW COUPON */
+#aw-onestepcheckout-review-coupon{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-coupon .input-box{
+    width: 266px;
+}
+#aw-onestepcheckout-review-coupon .input-box input{
+    width: 260px;
+}
+#aw-onestepcheckout-review-coupon .input-box input.with-buttons{
+    width: 110px;
+}
+
+/* REVIEW ENTERPRISE STORE CREDIT */
+#aw-onestepcheckout-review-enterprise-storecredit{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-enterprise-storecredit input[type=checkbox],
+#aw-onestepcheckout-review-enterprise-storecredit label{
+    cursor: pointer;
+}
+
+/* REVIEW ENTERPRISE POINTS */
+#aw-onestepcheckout-review-enterprise-points{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-enterprise-points input[type=checkbox],
+#aw-onestepcheckout-review-enterprise-points label{
+    cursor: pointer;
+}
+
+/* REVIEW ENTERPRISE GIFTCARD */
+#aw-onestepcheckout-review-enterprise-giftcard{
+    margin-top: 5px;
+}
+
+/* REVIEW AW STORE CREDIT */
+#aw-onestepcheckout-review-storecredit{
+    margin-top: 5px;
+}
+
+/* REVIEW POINTS */
+#aw-onestepcheckout-review-points{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-points .field-row input{
+    width: 100px;
+    text-align: right;
+}
+#aw-onestepcheckout-review-points .field-row .points-details{
+    display: inline;
+}
+
+/* REVIEW REFER A FRIEND */
+#aw-onestepcheckout-review-referafriend{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-referafriend .field-row input{
+    width: 100px;
+    text-align: right;
+}
+#aw-onestepcheckout-review-referafriend .field-row .raf-details{
+    display: inline;
+}
+
+/* COMMENTS/DDAN */
+#aw-onestepcheckout-review-comments .input-box{
+    width: 260px;
+}
+#aw-onestepcheckout-review-comments textarea{
+    width:100%!important;
+    height:5em;
+}
+#aw-onestepcheckout-review-comments .field-row{
+    margin-top: 5px;
+}
+.calendar{
+    z-index: 7;
+}
+
+#id-aw_deliverydate_date {
+    width: 133px;
+}
+
+#aw-onestepcheckout-review-comments-ddan img {
+    display: inline;
+}
+
+/* NEWSLETTER/ADVANCED NEWSLETTER from AW */
+#aw-onestepcheckout-review-newsletter{
+    margin-top: 5px;
+}
+#aw-onestepcheckout-review-newsletter input[type=checkbox],
+#aw-onestepcheckout-review-newsletter label{
+    cursor: pointer;
+}
+#aw-onestepcheckout-review-newsletter-advancednewsletter-segments{
+    padding-left: 20px;
+    height: 0px;
+    overflow: hidden;
+}
+#aw-onestepcheckout-review-newsletter-advancednewsletter-segments span{
+    font-size: 11px;
+}
+#aw-onestepcheckout-review-newsletter-advancednewsletter-segments .aw-an-already-subscribed{
+    cursor: default;
+    padding-left: 17px;
+}
+/* TERMS & CONDITIONS */
+#aw-onestepcheckout-review-terms{
+
+}
+#aw-onestepcheckout-review-terms ol li{
+    margin-top: 5px;
+}
+.aw-onestepcheckout-review-terms-description-container{
+    display: none;
+}
+
+/* RELATED PRODUCTS BLOCK */
+#aw-onestepcheckout-related{
+    position: relative;
+    padding-top:10px;
+}
+#aw-onestepcheckout-related-block{
+    border-top: 1px solid #D8D2C7;
+    padding-top:10px;
+}
+#aw-onestepcheckout-related-block-products-list{
+    text-align: center;
+}
+.aw-onestepcheckout-related-block-item{
+    width: 19%;
+    display: inline-block;
+    vertical-align: top;
+}
+#aw-onestepcheckout-related .link-compare{
+    font-weight: normal;
+}
+#aw-onestepcheckout-related .product-name{
+    font-weight: bold;
+}
+#aw-onestepcheckout-related .product-image img{
+    border: 1px solid #d0cdc9;
+}
+#aw-onestepcheckout-related .aw-onestepcheckout-overlay, #aw-onestepcheckout-related-redirect-timer-block{
+    border: 1px solid #D8D2C7;
+}
+#aw-onestepcheckout-related-redirect-timer-block .aw-onestepcheckout-timer-title{
+    padding-top:50px;
+}
+#aw-onestepcheckout-related-redirect-timer-block .aw-onestepcheckout-timer-actions-left a{
+    margin-right: 30px;
+}
+#aw-onestepcheckout-related-redirect-timer-block .aw-onestepcheckout-timer-actions-right a{
+    margin-left: 30px;
+}
+
+/* PLACE ORDER BUTTON */
+#aw-onestepcheckout-place-order{
+    margin-top: 15px;
+}
+#aw-onestepcheckout-place-order-button,
+#aw-onestepcheckout-place-order-button:visited {
+    background: #ff832f url(../images/button-background.png) repeat-x;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    width: 266px;
+    color: white;
+    z-index: 6;
+}
+#aw-onestepcheckout-place-order-button:hover{
+    background-color: #fc732e;
+}
+#aw-onestepcheckout-place-order-button:active{
+    top: 1px;
+}
+#aw-onestepcheckout-place-order-button span{
+    display: block;
+    line-height: normal;
+}
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-grand-total{
+    font-size: 20px;
+    padding: 10px 0 8px;
+}
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-grand-total .aw-onestepcheckout-place-order-label,
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-grand-total .aw-onestepcheckout-place-order-amount{
+    display: inline;
+}
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-grand-total .aw-onestepcheckout-place-order-process{
+    position: absolute;
+    width: 100%;
+}
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-grand-total .aw-onestepcheckout-place-order-process img{
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+}
+#aw-onestepcheckout-place-order-button .aw-onestepcheckout-place-order-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 0 12px;
+}
+#aw-onestepcheckout-place-order-button.aw-onestepcheckout-place-order-button-disabled,
+#aw-onestepcheckout-place-order-button.aw-onestepcheckout-place-order-button-disabled:visited,
+#aw-onestepcheckout-place-order-button.aw-onestepcheckout-place-order-button-disabled:hover{
+    background-color: #cccccc;
+    color: #f8f8ff;
+}
+#aw-onestepcheckout-place-order-button.aw-onestepcheckout-place-order-button-disabled span{
+    background-color: transparent !important;
+}
+#aw-onestepcheckout-place-order-button.aw-onestepcheckout-place-order-button-disabled:hover{
+    top: 0px;
+}
+#aw-onestepcheckout-place-order .aw-onestepcheckout-place-order-please-wait{
+    float: none;
+    color: #555;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+    z-index: 5;
+    top: -40px;
+    position: relative;
+    display: block;
+}
+#aw-onestepcheckout-place-order .aw-onestepcheckout-place-order-please-wait img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 3px;
+    display: inline-block;
+}
+#aw-onestepcheckout-place-order-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* IE fix */
+    background-color: white;
+    -moz-opacity: 0.01;
+    opacity:0.01;
+    filter: alpha(opacity=1);
+}
+/* #compatibility with Paypal Hosted Pro */
+#iframe-warning{
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 10px 0;
+}
+#hss-iframe{
+    margin: auto;
+    display: block;
+}
+
+/* UI - POPUP */
+.aw-onestepcheckout-popup-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    -moz-opacity: 0.3;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 100;
+    cursor: pointer;
+}
+.aw-onestepcheckout-popup{
+    position:fixed;
+    min-height: 40%;
+    width: 70%;
+    background-color:white;
+    z-index: 200;
+    overflow: hidden;
+    padding: 10px;
+}
+.aw-onestepcheckout-popup-content{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 0;
+}
+.aw-onestepcheckout-popup-accept{
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+}
+.aw-onestepcheckout-popup-accept button{
+    background: #eee;
+    height: 30px;
+    width: 150px;
+    border: 1px solid #aaa;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+}
+.aw-onestepcheckout-popup-accept button:hover{
+    background: #ddd;
+    border: 1px solid #999;
+}
+.aw-onestepcheckout-popup-accept a{
+    float: right;
+    margin-right: 16px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#aw_giftcard_code, #coupon_code {
+    margin-bottom: 7px;
+}
+
+#enterprise_giftcard_code {
+    margin-bottom: 5px;
+}
+#aw-onestepcheckout-enterprise-giftcard-apply-btn {
+    margin-bottom: 5px;
+}
+.aw-onestepcheckout-cart-table .aw_giftcard2-btn-remove {
+    float: right;
+    margin-left: 2px;
+}
+textarea.validation-failed {
+    border-color: #df280a;
+}
+
+@media screen and (min-width: 971px){
+    #aw-onestepcheckout-general-form{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+/****************            970 px              **********************/
+/*                                                                    */
+@media screen and (max-width:970px){
+    /* GENERAL CONTAINER */
+    .aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-left,
+    .aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-middle,
+    .aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-right{
+        width:100%;
+    }
+
+    #aw-onestepcheckout-container,
+    #aw-onestepcheckout-address .customer-name .field .input-box,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-wide,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left .input-box,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box,
+    .aw-onestepcheckout-add-loader-into-this-block,
+    #aw-onestepcheckout-order-review-cart-wrapper,
+    #aw-onestepcheckout-order-review-coupon-wrapper,
+    #aw-onestepcheckout-order-review-enterprise-giftcard-wrapper,
+    #aw-onestepcheckout-order-review-aw-giftcard-wrapper,
+    #aw-onestepcheckout-order-review-enterprise-storecredit-wrapper,
+    #aw-onestepcheckout-order-review-enterprise-points-wrapper,
+    #aw-onestepcheckout-order-review-points-wrapper,
+    #aw-onestepcheckout-order-review-referafriend-wrapper,
+    #aw-onestepcheckout-order-review-storecredit-wrapper,
+    #aw-onestepcheckout-review-coupon .input-box,
+    #aw-onestepcheckout-review-comments .input-box,
+    #aw-onestepcheckout-shipping-method .gift-messages-form .input-box,
+    #aw-onestepcheckout-shipping-method .gift-messages-form .field,
+    #aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container .input-box,
+    #aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container .field,
+    #aw-onestepcheckout-shipping-method .gift-messages-form .item .input-box,
+    #aw-onestepcheckout-shipping-method .gift-messages-form .item .field,
+    #aw-onestepcheckout-shipping-method .sp-methods .input-box,
+    #aw-onestepcheckout-payment-method .sp-methods .input-box
+    {
+        width: auto;
+    }
+
+    #aw-onestepcheckout-address-billing #billing-address-select,
+    #aw-onestepcheckout-address-shipping #shipping-address-select,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box select,
+    #aw-onestepcheckout-address .customer-name .field .input-box input,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left .input-box input,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right .input-box input,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-wide .input-box input,
+    #aw-onestepcheckout-shipping-method .gift-messages-form textarea,
+    #aw-onestepcheckout-shipping-method .gift-messages-form .item .input-text,
+    #aw-onestepcheckout-shipping-method .gift-messages-form #allow-gift-messages-for-items-container textarea,
+    #aw-onestepcheckout-payment-method .form-list input.input-text,
+    #aw-onestepcheckout-payment-method .form-list select,
+    #aw-onestepcheckout-review-coupon .input-box input,
+    #aw-onestepcheckout-review-coupon .input-box input.with-buttons,
+    .input-box input.with-buttons
+    {
+        width: 100%;
+    }
+
+    .aw-onestepcheckout-general-form-field select[name=billing\[gender\]],
+    .aw-onestepcheckout-general-form-field select[name=billing\[country_id\]],
+    .aw-onestepcheckout-general-form-field select[name=shipping\[country_id\]] {
+        width: 100%;
+    }
+
+    #aw-onestepcheckout-address .customer-name .field,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right {
+        width: 47%;
+    }
+
+    div #aw-onestepcheckout-place-order {
+        width: 270px;
+    }
+
+    .aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-left,
+    .aw-onestepcheckout-row .aw-onestepchekocut-column.aw-onestepchekocut-column-right {
+        background: none;
+    }
+
+    #aw-onestepcheckout-container label {
+        font-size: 14px;
+    }
+
+    .aw-onestepcheckout-number-2,
+    .aw-onestepcheckout-number-3,
+    .aw-onestepcheckout-number-4,
+    .aw-onestepcheckout-number-5,
+    .aw-onestepcheckout-number-6,
+    .aw-onestepcheckout-number-7,
+    .aw-onestepcheckout-number-8,
+    .aw-onestepcheckout-number-9,
+    .aw-onestepcheckout-number-v{
+        padding-top: 10px;
+        border-top: 2px dotted #ff832f;
+    }
+
+    #aw-onestepcheckout-authentification .validation-advice {
+        position: inherit;
+    }
+
+    .aw-onestepcheckout-auth-form-block {
+        vertical-align: top;
+        margin-bottom: 10px;
+        min-height: 55px;
+    }
+
+    .aw-onestepcheckout-auth-form-block a{
+        display: block;
+        float: right;
+        margin-top: 30px;
+    }
+
+    .aw-onestepcheckout-auth-form-block button {
+        margin-top: 20px;
+        margin-right: 15px;
+    }
+
+    #aw-onestepcheckout-container .form-list .field {
+        float: none;
+        display: inline-block;
+        width: 47%;
+    }
+
+    #aw-onestepcheckout-address .customer-name .field:nth-child(odd) {
+        margin-right: 3%;
+    }
+
+    #aw-onestepcheckout-address .customer-name .field:nth-child(even),
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right {
+        float: right;
+    }
+
+    #aw-onestepcheckout-shipping-method .gift-messages-form .input-box {
+        margin-right: 10px;
+    }
+
+    #aw-onestepcheckout-payment-method .sp-methods dt label {
+        min-width: 100%;
+    }
+
+    .aw-onestepcheckout-related-block-item {
+        width: 150px;
+        margin-left: 10px;
+    }
+
+    #aw-onestepcheckout-login-form .button-section{
+        padding-top: 0px;
+    }
+}
+
+
+/****************            740 px              **********************/
+/*                                                                    */
+@media screen and (max-width:740px){
+    .aw-onestepcheckout-auth-form-block a{
+        margin-top: 10px;
+    }
+
+    .aw-onestepcheckout-auth-form-block button {
+        margin-top: 0px;
+    }
+
+    .aw-onestepcheckout-auth-form-block {
+
+        min-height: 30px;
+    }
+
+    #aw-onestepcheckout-forgot-password-form .aw-onestepcheckout-auth-form-block {
+        display: block;
+
+    }
+}
+
+/****************            450 px              **********************/
+/*   iPhone 6 plus (width=414) and smaller screens                                     */
+@media screen and (max-width:450px){
+    #aw-onestepcheckout-container {
+        padding: 10px;
+    }
+
+    div #aw-onestepcheckout-place-order {
+        width: auto;
+    }
+
+    #aw-onestepcheckout-place-order-button, #aw-onestepcheckout-place-order-button:visited {
+        width: 100%;
+    }
+
+    #aw-onestepcheckout-review-coupon button{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #aw-onestepcheckout-aw-giftcard-check-btn {
+        margin-left: 0px;
+        float: right;
+    }
+
+    div.aw-giftcard-code-form button.aw-giftcard-button {
+        width: 48%;
+    }
+}
+
+/****************            360 px              **********************/
+/*   iPhone 5 (width=320) and smaller screens                                     */
+@media screen and (max-width:360px){
+    #aw-onestepcheckout-address .customer-name .field,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-left,
+    .aw-onestepcheckout-general-form-field.aw-onestepcheckout-general-form-field-right,
+    #aw-onestepcheckout-review-coupon .input-box input.with-buttons,
+    #aw-onestepcheckout-container .button {
+        width: 100%;
+    }
+
+    #aw-onestepcheckout-container .form-list .field {
+        display: block;
+        width: 100%;
+    }
+
+    #aw-onestepcheckout-container .button + .button {
+        margin-left: 0px;
+        margin-top: 7px;
+    }
+}

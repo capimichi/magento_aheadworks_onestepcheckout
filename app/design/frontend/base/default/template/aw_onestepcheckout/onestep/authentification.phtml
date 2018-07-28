@@ -1,0 +1,96 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This software is designed to work with Magento community edition and
+ * its use on an edition other than specified is prohibited. aheadWorks does not
+ * provide extension support in case of incorrect edition use.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Onestepcheckout
+ * @version    1.3.11
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+?><?php if ($this->canShow()): ?>
+<div id="aw-onestepcheckout-authentification">
+    <div id="aw-onestepcheckout-authentification-container">
+        <form id="aw-onestepcheckout-login-form" action="<?php echo $this->getLoginAjaxAction() ?>" method="post">
+            <div class="form-list">
+                <div class="aw-onestepcheckout-auth-form-block">
+                    <label for="login-email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                    <div class="input-box">
+                        <input type="text" class="input-text required-entry validate-email" id="login-email" name="login[username]" value="<?php echo $this->getUsername() ?>" />
+                    </div>
+                </div>
+                <div class="aw-onestepcheckout-auth-form-block">
+                    <label for="login-password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                    <div class="input-box">
+                        <input type="password" class="input-text required-entry validate-password" id="login-password" name="login[password]" />
+                    </div>
+                </div>
+                <div class="aw-onestepcheckout-auth-form-block button-section">
+                    <button type="submit" class="button" id="aw-onestepcheckout-login-submit-btn">
+                        <span><span><?php echo $this->__('Login') ?></span></span>
+                    </button>
+                    <a id="aw-onestepcheckout-login-forgot-link" href="javascript:void(0);"><?php echo $this->__('Forgot your password?') ?></a>
+                </div>
+            </div>
+            <?php echo $this->getBlockHtml('formkey') ?>
+        </form>
+        <form id="aw-onestepcheckout-forgot-password-form" action="<?php echo $this->getForgotPasswordAjaxAction() ?>" method="post">
+            <div class="form-list">
+                <p><?php echo $this->__('Please enter your email below and we will send you a new password.');?></p>
+                <div class="aw-onestepcheckout-auth-form-block">
+                    <label for="forgot-password-email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                    <div class="input-box">
+                        <input type="text" class="input-text required-entry validate-email" id="forgot-password-email" name="email" value="<?php echo $this->getUsername() ?>" />
+                    </div>
+                </div>
+                <div class="aw-onestepcheckout-auth-form-block">
+                    <button type="submit" class="button" id="aw-onestepcheckout-forgot-password-submit-btn">
+                        <span><span><?php echo $this->__('Submit') ?></span></span>
+                    </button>
+                    <a class="aw-onestepcheckout-forgot-password-back" href="javascript:void(0);"><?php echo $this->__('Return to Login') ?></a>
+                </div>
+            </div>
+            <?php echo $this->getBlockHtml('formkey') ?>
+        </form>
+        <div id="aw-onestepcheckout-forgot-password-success">
+            <p><?php echo $this->__('If there is an account associated with email address you will receive an email with a link to reset your password.');?></p>
+            <p><?php echo $this->__('Click the link below to return to login.');?></p>
+            <div class="aw-onestepcheckout-auth-form-block">
+                <a class="aw-onestepcheckout-forgot-password-back" href="javascript:void(0);"><?php echo $this->__('Return to Login') ?></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var awOSCLoginBlock = new AWOnestepcheckoutLogin({
+        containerSelector: '#aw-onestepcheckout-authentification-container',
+        forgotPasswordLinkSelector: '#aw-onestepcheckout-login-forgot-link',
+        backToLoginLinkSelector: '.aw-onestepcheckout-forgot-password-back',
+        loginFormSelector: '#aw-onestepcheckout-login-form',
+        forgotPasswordFormSelector: '#aw-onestepcheckout-forgot-password-form',
+        forgotPasswordSuccessBlockSelector: '#aw-onestepcheckout-forgot-password-success',
+        errorMessageBoxCssClass: 'aw-onestepcheckout-error-msg ',
+        overlayConfig: {
+            '48px': 'aw-onestepcheckout-overlay aw-onestepcheckout-overlay-48',
+            '24px': 'aw-onestepcheckout-overlay aw-onestepcheckout-overlay-24',
+            '16px': 'aw-onestepcheckout-overlay aw-onestepcheckout-overlay-16'
+        },
+        jsErrorMsg: <?php echo Zend_Json::encode($this->__("Oops something's wrong")); ?>
+    });
+</script>
+<?php endif;?>

@@ -1,0 +1,72 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This software is designed to work with Magento community edition and
+ * its use on an edition other than specified is prohibited. aheadWorks does not
+ * provide extension support in case of incorrect edition use.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Onestepcheckout
+ * @version    1.3.11
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+?><?php
+/**
+ * @var AW_Onestepcheckout_Block_Onestep_Form_Review_Awgiftcard $this
+ */
+
+if (!$this->canShow()) {
+    return;
+}
+?>
+<div id="aw-onestepcheckout-review-aw-giftcard">
+    <div class="aw-giftcard-message-container" style="overflow:hidden;height:0px;"></div>
+    <div class="aw-giftcard-code-form">
+        <label for="aw_giftcard_code"><?php echo $this->__('Gift Cards') ?></label>
+
+        <div class="input-box field-row">
+            <input class="input-text with-buttons" id="aw_giftcard_code" name="aw_giftcard_code" value=""/><br/>
+            <button type="button" class="button aw-giftcard-button" id="aw-onestepcheckout-aw-giftcard-apply-btn"
+                    onclick="return false;">
+                <span><span><?php echo $this->__('Add Gift Card'); ?></span></span>
+            </button>
+            <button type="button" class="button aw-giftcard-button" id="aw-onestepcheckout-aw-giftcard-check-btn"
+                    onclick="return false;">
+                <span><span><?php echo $this->__('Check Gift Card'); ?></span></span>
+            </button>
+        </div>
+
+        <?php echo $this->getBlockHtml('formkey') ?>
+
+    </div>
+    <script type="text/javascript">
+        var awOSCAwGiftcard = new AWOnestepcheckoutAWGiftcard({
+            containerSelector: '.aw-giftcard-code-form',
+            applyGiftcardButtonSelector: '#aw-onestepcheckout-aw-giftcard-apply-btn',
+            checkGiftcardButtonSelector: '#aw-onestepcheckout-aw-giftcard-check-btn',
+            cancelGiftcardElSelector: 'tr th a',
+            msgContainerSelector: '.aw-giftcard-message-container',
+            applyGiftcardUrl: '<?php echo $this->getApplyAWGiftcardAjaxUrl(); ?>',
+            checkGiftcardUrl: '<?php echo $this->getCheckAWGiftcardAjaxUrl(); ?>',
+            removeGiftcardUrl: '<?php echo $this->getRemoveAWGiftcardAjaxUrl(); ?>',
+            giftcardCodeInput: 'aw_giftcard_code',
+            successMessageBoxCssClass: 'aw-onestepcheckout-success-msg',
+            errorMessageBoxCssClass: 'aw-onestepcheckout-error-msg',
+            jsErrorMsg: <?php echo Zend_Json::encode($this->__("Oops something's wrong")); ?>,
+            jsSuccessMsg: <?php echo Zend_Json::encode($this->__("Ok")); ?>
+        });
+    </script>
+</div>

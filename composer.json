@@ -1,0 +1,8 @@
+{
+    "name": "capimichi/magento_aheadworks_onestepcheckout",
+    "type": "magento-module",
+    "description": "",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

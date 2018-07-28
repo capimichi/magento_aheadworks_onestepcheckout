@@ -1,0 +1,97 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This software is designed to work with Magento community edition and
+ * its use on an edition other than specified is prohibited. aheadWorks does not
+ * provide extension support in case of incorrect edition use.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Onestepcheckout
+ * @version    1.3.11
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+?><?php $_code = Braintree_Payments_Model_Creditcard::PAYMENT_METHOD_CODE ?>
+<?php if (Mage::helper('braintree_payments')->isBraintreeCreditCardEnabled()) : ?>
+    <script type="text/javascript">
+        // This rewrites native save method to receive nonce
+        AWOnestepcheckoutPayment.addMethods({
+            savePayment: function(){
+                var me = this;
+                var isValid = true;
+                var block = this.methodAdditionalContainerIdPrefix + this.currentMethod;
+                [block + '_before', block, block + '_after'].each(function(el) {
+                    var element = $(el);
+                    if (!element) {
+                        return;
+                    }
+                    //validation
+                    Form.getElements(element).each(function(vElm){
+                        var cn = $w(vElm.className);
+                        isValid = isValid && cn.all(function(name) {
+                                var v = Validation.get(name);
+                                try {
+                                    if(Validation.isVisible(vElm) && !v.test($F(vElm), vElm)) {
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                } catch(e) {
+                                    return true;
+                                }
+                            });
+                    })
+                });
+                if (!isValid) {
+                    return;
+                }
+
+                var tokenField = $('<?php echo $_code ?>_cc_token');
+                var oscAjaxRequest = function(me){
+                    <?php if (Mage::helper('braintree_payments')->isAdvancedFraudProtectionEnabled()): ?>
+                    if ($('device_data')) {
+                        $('device_data').disabled = false;
+                    }
+                    <?php endif;?>
+                    if (typeof EwayPayment != 'undefined' && EwayPayment.isEwayRapidMethod(me.currentMethod)) {
+                        var currentForm = eCrypt.doEncrypt();
+                    } else {
+                        var currentForm = me.container;
+                    }
+
+                    window.payment.currentMethod = me.currentMethod;
+                    AWOnestepcheckoutCore.updater.startRequest(me.savePaymentUrl, {
+                        method: 'post',
+                        parameters: Form.serialize(currentForm, true)
+                    });
+                };
+                braintreeUtils.createHiddenInput(
+                    {name: "payment[nonce]", id: '<?php echo Mage::helper('braintree_payments')->getNonceInputId() ?>'},
+                    "<?php echo $this->getFormId()?>"
+                );
+                if (this.currentMethod == '<?php echo $_code ?>' && (!tokenField || (tokenField && tokenField.value == ''))) {
+                    braintreeUtils.getPaymentNonce(
+                        '<?php echo $_code ?>',
+                        '<?php echo Mage::helper('braintree_payments')->getCardholderName() ?>',
+                        oscAjaxRequest(this),
+                        "<?php echo Mage::helper('braintree_payments')->getToken(); ?>"
+                    );
+                } else {
+                    oscAjaxRequest(this);
+                }
+            }
+        });
+    </script>
+<?php endif; ?>

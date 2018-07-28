@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <aw_onestepcheckout translate="label" module="aw_onestepcheckout">
+            <label>One Step Checkout</label>
+            <tab>awall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <is_enabled translate="label">
+                            <label>Enable One Step Checkout</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </is_enabled>
+                        <is_use_billing_as_shipping translate="label">
+                            <label>Always Use Billing Address as a Shipping Address</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </is_use_billing_as_shipping>
+                        <title translate="label">
+                            <label>One Step Checkout Page Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <description translate="label">
+                            <label>One Step Checkout Description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <comment>HTML allowed</comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </description>
+                        <is_block_numbering translate="label">
+                            <label>Show Blocks Numbering</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </is_block_numbering>
+                        <default_payment_method translate="label">
+                            <label>Default Payment Method</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_payment_methods</source_model>
+                        </default_payment_method>
+                        <default_shipping_method translate="label">
+                            <label>Default Shipping Method</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_shipping_methods</source_model>
+                        </default_shipping_method>
+                        <is_cart_editable translate="label">
+                            <label>Cart editable at checkout</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </is_cart_editable>
+                    </fields>
+                </general>
+                <security translate="label">
+                    <label>Security</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <validate_formkey translate="label">
+                            <label>Enable Form Key Validation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </validate_formkey>
+                    </fields>
+                </security>
+                <exclude_include_fields translate="label">
+                    <label>Exclude / Include Fields</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <is_company translate="label">
+                            <label>Company</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_company>
+                        <is_fax translate="label">
+                            <label>Fax</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_fax>
+                        <is_coupon translate="label">
+                            <label>Discount Code</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_coupon>
+                        <is_comments translate="label comment">
+                            <label>Comments</label>
+                            <comment><![CDATA[If <a href="http://ecommerce.aheadworks.com/magento-extensions/delivery-date-and-notice.html" target="_blank">Delivery Date and Notice</a> installed it replaces Comments bock]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_comments>
+                        <is_newsletter translate="label comment">
+                            <label>Newsletter Subscription</label>
+                            <comment><![CDATA[If <a href="http://ecommerce.aheadworks.com/magento-extensions/advanced-newsletter.html" target="_blank">Advanced Newsletter</a> installed it replaces native newsletter block]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_newsletter>
+                        <is_related_products translate="label comment">
+                            <label>Related Products</label>
+                            <comment><![CDATA[If <a href="http://ecommerce.aheadworks.com/magento-extensions/automatic-related-products-2.html" target="_blank">Automatic Related Products 2</a> installed it replaces native related block]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_enableddisabled</source_model>
+                        </is_related_products>
+                        <autorelated_rule_id translate="label comment">
+                            <label>Use this block for Related Products</label>
+                            <comment><![CDATA[Shopping Cart blocks created by <a href="http://ecommerce.aheadworks.com/magento-extensions/automatic-related-products-2.html" target="_blank">Automatic Related Products 2</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>aw_onestepcheckout/source_autorelated_rules</source_model>
+                            <depends>
+                                <is_related_products>1</is_related_products>
+                                <is_autorelated_enabled>1</is_autorelated_enabled>
+                            </depends>
+                        </autorelated_rule_id>
+                        <is_autorelated_enabled>
+                            <frontend_type>hidden</frontend_type>
+                            <frontend_model>aw_onestepcheckout/adminhtml_system_config_form_related_enabled</frontend_model>
+                            <sort_order>120</sort_order>
+                            <frontend_class>test</frontend_class>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <autorelated_rule_id>0</autorelated_rule_id>
+                            </depends>
+                        </is_autorelated_enabled>
+                    </fields>
+                </exclude_include_fields>
+                <frontend translate="label">
+                    <label>Frontend Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <display_apply_coupon_button translate="label">
+                            <label>Display "Apply Coupon" Button</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </display_apply_coupon_button>
+                    </fields>
+                </frontend>
+            </groups>
+        </aw_onestepcheckout>
+    </sections>
+</config>

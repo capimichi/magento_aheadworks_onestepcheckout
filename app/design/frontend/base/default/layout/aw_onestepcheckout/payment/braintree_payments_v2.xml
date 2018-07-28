@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <aw_onestepcheckout_index_index>
+        <reference name="after_body_start">
+            <block type="core/template" name="braintree_payments_setup_utils" template="braintree/creditcard/setup_utils.phtml"/>
+        </reference>
+        <reference name="before_body_end">
+            <block type="braintree_payments/datajs" name="braintree_payments_data_js" template="braintree/data_js.phtml">
+                <action method="setData">
+                    <key>form_id</key>
+                    <value>aw-onestepcheckout-general-form</value>
+                </action>
+            </block>
+            <block type="core/template" name="braintree_payments_setup" template="braintree/creditcard/setup.phtml">
+                <action method="setData">
+                    <key>form_id</key>
+                    <value>aw-onestepcheckout-payment-method</value>
+                </action>
+            </block>
+            <block type="core/template" name="braintree_payments_nonce" template="aw_onestepcheckout/onestep/form/payment/braintree/creditcard/nonce.phtml">
+                <action method="setData">
+                    <key>form_id</key>
+                    <value>aw-onestepcheckout-payment-method</value>
+                </action>
+            </block>
+        </reference>
+    </aw_onestepcheckout_index_index>
+</layout>

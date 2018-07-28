@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <aw_onestepcheckout_index_index>
+        <reference name="head">
+            <action method="addJs"><file>braintree/braintree-1.3.4.js</file></action>
+            <action method="addCss"><stylesheet>braintree/css/braintree.css</stylesheet></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="aw_onestepcheckout/onestep_form_payment_braintree_datajs" name="braintree_payments_data_js" template="braintree/data_js.phtml">
+                <action method="setFormId"><form_id>aw-onestepcheckout-general-form</form_id></action>
+            </block>
+        </reference>
+    </aw_onestepcheckout_index_index>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <aw_onestepcheckout_index_index>
+        <reference name="head">
+            <action ifconfig="payment/ewayrapid_general/active" method="addJs"><script>ewayrapid/eCrypt.js</script></action>
+            <action ifconfig="payment/ewayrapid_general/active" method="addJs"><script>ewayrapid/ewayrapid.js</script></action>
+            <action ifconfig="payment/ewayrapid_general/active" method="addCss"><script>css/ewayrapid.css</script></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="ewayrapid.js" after="-">
+                <action ifconfig="payment/ewayrapid_general/active" method="setTemplate">
+                    <template>aw_onestepcheckout/onestep/form/payment/eway_rapid/init.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </aw_onestepcheckout_index_index>
+</layout>
